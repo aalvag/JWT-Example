@@ -1,0 +1,23 @@
+{{!-- Archivo: views/error.handlebars --}}
+<div class="error-container">
+    <h1>Oops! Algo salió mal</h1>
+
+    <div class="error-details">
+        <p>Lo sentimos, ha ocurrido un error inesperado.</p>
+        {{#if message}}
+        <p class="error-message">{{message}}</p>
+        {{/if}}
+        {{#if error}}
+        <p class="error-stack">{{error.stack}}</p>
+        {{/if}}
+    </div>
+
+    <div class="error-actions">
+        <a href="/" class="btn btn-primary">Volver a la página de inicio</a>
+        <a href="javascript:history.back()" class="btn btn-secondary">Volver a la página anterior</a>
+    </div>
+
+    <div class="error-help">
+        <p>Si el problema persiste, por favor contacta a nuestro equipo de soporte.</p>
+    </div>
+</div>

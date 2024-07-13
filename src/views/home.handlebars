@@ -1,0 +1,17 @@
+<div class="home-container">
+    <h1>Ejemplo JWT y Passport</h1>
+
+    <p>Esta es una aplicación de ejemplo que utiliza Express, Passport, JWT y Handlebars.</p>
+
+    <div class="action-buttons">
+        {{#if user}}
+        <p>Hola, {{user.username}}!</p>
+        <a href="/profile" class="btn btn-primary">Ver Perfil</a>
+        <a href="/auth/logout" class="btn btn-secondary">Cerrar Sesión</a>
+        {{else}}
+        <a href="/auth/login" class="btn btn-primary">Iniciar Sesión</a>
+        <a href="/auth/register" class="btn btn-secondary">Registrarse</a>
+        {{/if}}
+    </div>
+
+</div>
